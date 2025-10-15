@@ -1,17 +1,47 @@
-import React from 'react'
-import Logo from '../atoms/Logo'
-import NavBarLinks from '../atoms/NavBarLinks'
-import {Layout} from "antd";
+// src/components/molecules/Header.tsx
+import React, { useState } from "react";
+import Logo from "../atoms/Logo";
+import NavBarLinks from "../atoms/NavBarLinks";
 
-const {Header} = Layout
+const Header: React.FC = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
 
-const MainHeader = () => {
     return (
-        <Header>
-            <Logo />
-            <NavBarLinks />
-        </Header>
-    )
-}
+        <header
+            style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "10px 20px",
+                borderBottom: "1px solid #ddd",
+                position: "fixed",
+                width: "100%",
+                top: 0,
+                left: 0,
+                backgroundColor: "black",
+                zIndex: 100,
+            }}
+        >
+            <Logo title="Bienvenido" />
 
-export default MainHeader
+            <div style={{ display: "flex", alignItems: "center", color: "black" }}>
+                <NavBarLinks />
+            </div>
+
+            <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                style={{
+                    display: "none", // luego se muestra con media query en móvil
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    fontSize: "16px",
+                }}
+            >
+                {menuOpen ? "Cerrar" : "Menú"}
+            </button>
+        </header>
+    );
+};
+
+export default Header;
