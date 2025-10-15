@@ -1,4 +1,5 @@
 import type { Route } from "./+types/home";
+import HomeLayout from '../components/templates/HomeLayout'
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,5 +9,5 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <p> Hola mundo</p>;
+  return <HomeLayout></HomeLayout>;
 }
