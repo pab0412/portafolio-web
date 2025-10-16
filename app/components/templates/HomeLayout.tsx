@@ -1,31 +1,36 @@
-import React from 'react'
-import Header from '../molecules/Header'
-import FloatingTitle from '../molecules/Title'
+import React from "react";
+import Header from "../molecules/Header";
+import FloatingTitle from "../molecules/Title";
 import AboutMe from "../organisms/AboutSection";
-import ProjectsSection from "~/components/organisms/Proyects";
-import ContactSection from "~/components/organisms/ContactSection";
-import Footer from "~/components/organisms/Footer";
+import ProjectsSection from "../organisms/Proyects";
+import ContactSection from "../organisms/ContactSection";
+import Footer from "../organisms/Footer";
+import AnimatedBackground from "~/components/atoms/AnimatedBackground";
 
-const HomeLayout = () => {
-    return(
-        <div       style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            paddingTop: "100px", // separa el header del contenido
-            width: "100%",
-            minHeight: "100vh",
-            backgroundColor: "#f5f5f5", // opcional: fondo general
-        }}>
-            <Header/>
-            <AboutMe/>
-            <FloatingTitle title={'Proyectos'}/>
-            <ProjectsSection />
-            <FloatingTitle title={"Contactame"} />
-            <ContactSection />
+const HomeLayout: React.FC = () => {
+    return (
+        <div style={{ width: "100%", paddingTop: "70px" }}>
+            <AnimatedBackground />
+            <Header />
+
+            <div id="about" style={{ width: "100%" }}>
+                <FloatingTitle title="Sobre mí" />
+                <AboutMe />
+            </div>
+
+            <div id="projects" style={{ width: "100%" }}>
+                <FloatingTitle title="Proyectos" />
+                <ProjectsSection />
+            </div>
+
+            <div id="contact" style={{ width: "100%" }}>
+                <FloatingTitle title="Contáctame" />
+                <ContactSection />
+            </div>
+
             <Footer />
         </div>
-    )
-}
+    );
+};
 
-export default HomeLayout
+export default HomeLayout;
