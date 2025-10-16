@@ -6,8 +6,8 @@ interface CustomCardProps {
     width?: string | number;
     maxWidth?: string | number;
     style?: React.CSSProperties;
-    float?: boolean;       // activar/desactivar animación flotante
-    marginTop?: number;    // margen superior personalizado
+    onMouseEnter?: React.MouseEventHandler<HTMLDivElement>; // ✅ nuevo
+    onMouseLeave?: React.MouseEventHandler<HTMLDivElement>; // ✅ nuevo
 }
 
 const CustomCard: React.FC<CustomCardProps> = ({
@@ -15,22 +15,24 @@ const CustomCard: React.FC<CustomCardProps> = ({
                                                    width = "80%",
                                                    maxWidth = "800px",
                                                    style = {},
-                                                   float = true,          // por defecto flota
-                                                   marginTop = 40,        // margen superior por defecto
+                                                   onMouseEnter,
+                                                   onMouseLeave,
                                                }) => {
     return (
         <Card
             style={{
                 width,
                 maxWidth,
-                margin: `${marginTop}px auto`,
+                margin: "40px auto",
                 borderRadius: "20px",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                 textAlign: "center",
                 padding: "30px",
-                animation: float ? "float 6s ease-in-out infinite" : undefined,
+                animation: "float 6s ease-in-out infinite",
                 ...style,
             }}
+            onMouseEnter={onMouseEnter} // ✅ pasa los eventos
+            onMouseLeave={onMouseLeave} // ✅ pasa los eventos
         >
             {children}
         </Card>

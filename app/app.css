@@ -22,9 +22,9 @@ body {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
+    0% { background-position: 50%; }
     50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    100% { background-position: 50%; }
 }
 
 /* global.css o style.css */

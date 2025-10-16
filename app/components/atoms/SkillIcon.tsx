@@ -1,4 +1,3 @@
-// src/components/atoms/SkillIcon.tsx
 import React from "react";
 
 interface SkillIconProps {

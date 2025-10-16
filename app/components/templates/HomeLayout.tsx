@@ -1,6 +1,10 @@
 import React from 'react'
 import Header from '../molecules/Header'
-import AboutMe from "~/components/organisms/AboutSection";
+import FloatingTitle from '../molecules/Title'
+import AboutMe from "../organisms/AboutSection";
+import ProjectsSection from "~/components/organisms/Proyects";
+import ContactSection from "~/components/organisms/ContactSection";
+import Footer from "~/components/organisms/Footer";
 
 const HomeLayout = () => {
     return(
@@ -15,6 +19,11 @@ const HomeLayout = () => {
         }}>
             <Header/>
             <AboutMe/>
+            <FloatingTitle title={'Proyectos'}/>
+            <ProjectsSection />
+            <FloatingTitle title={"Contactame"} />
+            <ContactSection />
+            <Footer />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiHtml5, SiCss3, SiSpring, SiPython } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiHtml5, SiCss3, SiSpring, SiPython, SiSqlite } from "react-icons/si";
 
 interface Skill {
     name: string;
@@ -9,6 +9,7 @@ interface Skill {
 const skills: Skill[] = [
     { name: "Python", icon: <SiPython color="#F7DF1E" />},
     { name: "Spring Java", icon: <SiSpring color="#F7DF1E" />},
+    { name: "SQL", icon: <SiSqlite color={"#FFFF"}/>},
     { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
     { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
     { name: "React", icon: <SiReact color="#61DAFB" /> },

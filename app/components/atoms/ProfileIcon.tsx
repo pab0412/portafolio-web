@@ -1,8 +1,7 @@
-// src/components/atoms/ProfileIcon.tsx
 import React from "react";
 
 interface ProfileIconProps {
-    imageUrl: string; // Ruta o URL de la imagen
+    imageUrl: string; // URL de la imagen
     size?: number; // Tamaño opcional
     alt?: string; // Texto alternativo
 }
