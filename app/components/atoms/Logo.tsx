@@ -33,7 +33,7 @@ const Logo: React.FC<LogoProps> = ({ title = "PABO.dev", speed = 150, pause = 10
     return (
         <Flex align="center" style={{ fontSize: "16px", fontWeight: "bold", cursor: "pointer" }}>
       <span role="img" aria-label="logo" style={{ marginRight: 6 }}>
-        💼
+        ⭐
       </span>
             {displayedText}
         </Flex>

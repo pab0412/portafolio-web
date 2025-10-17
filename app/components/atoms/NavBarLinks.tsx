@@ -1,9 +1,8 @@
-// src/components/atoms/NavBarLinks.tsx
 import React from "react";
 import { Menu } from "antd";
 
 interface NavBarLinksProps {
-    onLinkClick?: (key: string) => void; // ✅ prop opcional
+    onLinkClick?: (key: string) => void;
 }
 
 const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {

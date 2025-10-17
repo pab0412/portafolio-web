@@ -5,12 +5,10 @@ import AboutMe from "../organisms/AboutSection";
 import ProjectsSection from "../organisms/Proyects";
 import ContactSection from "../organisms/ContactSection";
 import Footer from "../organisms/Footer";
-import AnimatedBackground from "~/components/atoms/AnimatedBackground";
 
 const HomeLayout: React.FC = () => {
     return (
         <div style={{ width: "100%", paddingTop: "70px" }}>
-            <AnimatedBackground />
             <Header />
 
             <div id="about" style={{ width: "100%" }}>

@@ -6,7 +6,7 @@ import {
     SiReact,
     SiNodedotjs,
     SiHtml5,
-    SiCss3,
+    SiCss3, SiSpring,
 } from "react-icons/si";
 
 interface ProjectCardProps {
@@ -17,10 +17,11 @@ interface ProjectCardProps {
     tecnologies: string[];
 }
 
-// Mapear nombre -> componente React (función)
+
 const iconMap: Record<string, React.ReactElement> = {
     javascript: <SiJavascript size={24} />,
     typescript: <SiTypescript size={24} />,
+    spring: <SiSpring size={24} />,
     react: <SiReact size={24} />,
     node: <SiNodedotjs size={24} />,
     html: <SiHtml5 size={24} />,

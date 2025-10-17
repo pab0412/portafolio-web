@@ -2,7 +2,7 @@ import React from "react";
 
 interface SkillIconProps {
     name: string;
-    icon: React.ReactNode; // puedes pasar un SVG, imagen o emoji
+    icon: React.ReactNode;
 }
 
 const SkillIcon: React.FC<SkillIconProps> = ({ name, icon }) => {

@@ -1,21 +1,18 @@
-// src/components/molecules/Header.tsx
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router";
 import Logo from "../atoms/Logo";
 import NavBarLinks from "../atoms/NavBarLinks";
+
 
 const Header: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
 
-    // Función para hacer scroll y actualizar URL
     const handleScroll = (id: string, path: string) => {
-        // Cambia la URL sin recargar la página
         if (location.pathname !== path) {
             navigate(path, { replace: true });
         } else {
-            // Si ya estamos en la misma ruta, actualiza solo el estado de la URL
             window.history.replaceState(null, "", path);
         }
 
@@ -40,9 +37,9 @@ const Header: React.FC = () => {
                 zIndex: 100,
             }}
         >
-            <Logo title="Bienvenido" />
+            <Logo title="¡Bienvenido!" />
 
-            <div style={{ display: "flex", alignItems: "center", color: "white" }}>
+            <div style={{ display: "flex", alignItems: "center", color: "black" }}>
                 <NavBarLinks
                     onLinkClick={(key: string) => {
                         switch (key) {
@@ -60,10 +57,11 @@ const Header: React.FC = () => {
                 />
             </div>
 
+
             <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 style={{
-                    display: "none", // se activa con media query en móvil
+                    display: "none",
                     background: "none",
                     border: "none",
                     cursor: "pointer",

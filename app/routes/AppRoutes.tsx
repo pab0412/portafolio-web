@@ -1,7 +1,6 @@
-// src/app/routes/AppRouter.tsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import Home from "../routes/home"; // tu Home.tsx
+import Home from "../routes/home";
 import AboutSection from "../components/organisms/AboutSection";
 import ProjectsSection from "../components/organisms/Proyects";
 import ContactSection from "../components/organisms/ContactSection";

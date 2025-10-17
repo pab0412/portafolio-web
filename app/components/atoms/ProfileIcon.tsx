@@ -1,9 +1,9 @@
 import React from "react";
 
 interface ProfileIconProps {
-    imageUrl: string; // URL de la imagen
-    size?: number; // Tamaño opcional
-    alt?: string; // Texto alternativo
+    imageUrl: string;
+    size?: number;
+    alt?: string;
 }
 
 const ProfileIcon: React.FC<ProfileIconProps> = ({

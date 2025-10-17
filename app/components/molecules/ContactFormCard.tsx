@@ -42,8 +42,8 @@ const ContactFormCard: React.FC<ContactFormCardProps> = ({ onSubmit }) => {
     return (
         <CustomCard
             style={{
-                width: "100%",        // ocupa todo el ancho disponible
-                maxWidth: "1000px",   // límite máximo amplio
+                width: "100%",
+                maxWidth: "1000px",
                 margin: "20px auto",
                 padding: "40px",
             }}

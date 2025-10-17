@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiHtml5, SiCss3, SiSpring, SiPython, SiSqlite } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiHtml5, SiCss3, SiSpring, SiPython} from "react-icons/si";
 
 interface Skill {
     name: string;
@@ -7,15 +7,14 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-    { name: "Python", icon: <SiPython color="#F7DF1E" />},
-    { name: "Spring Java", icon: <SiSpring color="#F7DF1E" />},
-    { name: "SQL", icon: <SiSqlite color={"#FFFF"}/>},
-    { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
-    { name: "TypeScript", icon: <SiTypescript color="#3178C6" /> },
-    { name: "React", icon: <SiReact color="#61DAFB" /> },
-    { name: "Node.js", icon: <SiNodedotjs color="#339933" /> },
-    { name: "HTML5", icon: <SiHtml5 color="#E34F26" /> },
-    { name: "CSS3", icon: <SiCss3 color="#1572B6" /> },
+    { name: "Python", icon: <SiPython color="#FFFF" />},
+    { name: "Spring Java", icon: <SiSpring color="#FFFF" />},
+    { name: "JavaScript", icon: <SiJavascript color="#FFFF" /> },
+    { name: "TypeScript", icon: <SiTypescript color="#FFFF" /> },
+    { name: "React", icon: <SiReact color="#FFFF" /> },
+    { name: "Node.js", icon: <SiNodedotjs color="#FFFF" /> },
+    { name: "HTML5", icon: <SiHtml5 color="#FFFF" /> },
+    { name: "CSS3", icon: <SiCss3 color="#FFFF" /> },
 ];
 
 const SkillsList: React.FC = () => {

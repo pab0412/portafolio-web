@@ -5,10 +5,15 @@ import ProjectsSection from "../components/organisms/Proyects";
 import ContactSection from "../components/organisms/ContactSection";
 import Footer from "../components/organisms/Footer";
 import FloatingTitle from "../components/molecules/Title";
+import AnimatedBackground from "../components/atoms/AnimatedBackground";
+import starfall from "../src/assets/background/starfall.gif"
 
 const Home = () => {
     return (
         <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", width: "100%" }}>
+            <AnimatedBackground gifUrl={starfall}/>
+
+
             <Header />
 
             <div id="about" style={{ width: "100%", paddingTop: "70px" }}>
@@ -17,7 +22,7 @@ const Home = () => {
             </div>
 
             <div id="projects" style={{ width: "100%" }}>
-                <FloatingTitle title="Proyectos" />
+                <FloatingTitle title="Proyectos" subtitle={"Proyectos creados por mi o donde contribuí"} />
                 <ProjectsSection />
             </div>
 
