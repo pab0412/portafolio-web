@@ -9,6 +9,7 @@ const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {
     return (
         <Menu
             mode="horizontal"
+            selectedKeys={[]} // 👈 esto evita que quede seleccionado
             items={[
                 { key: "1", label: "Sobre mi" },
                 { key: "2", label: "Proyectos" },
@@ -16,6 +17,12 @@ const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {
             ]}
             onClick={(info) => {
                 if (onLinkClick) onLinkClick(info.key);
+            }}
+            style={{
+                backgroundColor: "transparent",
+                color: "white",
+                borderBottom: "none",
+                fontWeight: "bold",
             }}
         />
     );
