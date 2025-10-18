@@ -32,13 +32,14 @@ const Header: React.FC = () => {
                 width: "100%",
                 top: 0,
                 left: 0,
-                backgroundColor: "black",
+                backgroundColor: "#3f3f3f",
+                color:"white",
                 zIndex: 100,
             }}
         >
             <Logo title="¡Bienvenido!" />
 
-            <div style={{ display: "flex", alignItems: "center", color: "black" }}>
+            <div style={{ display: "flex", alignItems: "center", color: "white", backgroundColor:"#a314d9" }}>
                 <NavBarLinks
                     onLinkClick={(key: string) => {
                         switch (key) {
@@ -65,7 +66,7 @@ const Header: React.FC = () => {
                 onClick={() => setMenuOpen(!menuOpen)}
                 style={{
                     display: "none",
-                    background: "none",
+                    backgroundColor: "#1f2937",
                     border: "none",
                     cursor: "pointer",
                     fontSize: "16px",

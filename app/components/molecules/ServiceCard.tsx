@@ -10,11 +10,11 @@ interface ServiceCardProps {
 }
 
 const iconMap: Record<string, React.ReactElement> = {
-    code: <FaCode size={28} color="#1890ff" />,
-    project: <FaProjectDiagram size={28} color="#1890ff" />,
-    database: <FaDatabase size={28} color="#1890ff" />,
-    react: <FaReact size={28} color="#1890ff" />,
-    cloud: <FaCloud size={28} color="#1890ff" />,
+    code: <FaCode size={28}/>,
+    project: <FaProjectDiagram size={28} />,
+    database: <FaDatabase size={28} />,
+    react: <FaReact size={28} />,
+    cloud: <FaCloud size={28} />,
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({

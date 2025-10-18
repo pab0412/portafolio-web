@@ -22,6 +22,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
                                                }) => {
     return (
         <Card
+            className="custom-dark "
             style={{
                 width,
                 maxWidth,
@@ -31,6 +32,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
                 textAlign: "center",
                 padding: "30px",
                 animation: float ? "float 6s ease-in-out infinite" : "none",
+                backgroundColor: "#1f2937",
                 ...style,
             }}
             onMouseEnter={onMouseEnter}

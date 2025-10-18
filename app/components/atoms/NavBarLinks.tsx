@@ -23,7 +23,7 @@ const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {
                 backgroundColor: "transparent",
                 color: "white",
                 borderBottom: "none",
-                fontWeight: "bold",
+                fontWeight: "strong",
             }}
         />
     );

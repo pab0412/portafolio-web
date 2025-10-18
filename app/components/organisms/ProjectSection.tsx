@@ -38,7 +38,6 @@ const ProjectsSection: React.FC = () => {
                     width: "100%",
                     justifyItems: "center",
                     alignItems: "stretch",
-                    color: "black",
                 }}
             >
                 {allProjects.slice(0, visibleCount).map(p => (

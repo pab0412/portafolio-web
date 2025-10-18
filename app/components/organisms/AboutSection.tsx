@@ -48,7 +48,7 @@ const AboutSection: React.FC = () => {
                         style={{
                             fontSize: "20px",
                             lineHeight: "1.7",
-                            color: "#333",
+                            color: "#ffff",
                             marginBottom: "40px",
                             maxWidth: "750px",
                         }}

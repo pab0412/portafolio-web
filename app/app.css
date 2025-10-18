@@ -7,8 +7,6 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
-
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
@@ -17,8 +15,39 @@ body {
 /*
     Para la carta flotante
  */
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
+}
+
+/*
+ Para el fondo animado generico
+ */
+@layer utilities {
+    .animated-bg {
+        background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695);
+        background-size: 600% 600%;
+        animation: gradientShift 10s ease infinite;
+    }
+
+    .animated-bg-dark {
+        background: linear-gradient(270deg, #0f172a, #1e293b, #334155);
+        background-size: 600% 600%;
+        animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+}
+
+/*
+    Tema oscuro con texto blanco
+ */
+.ant-card.custom-dark * {
+    color: white !important;
 }

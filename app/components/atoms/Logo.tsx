@@ -7,7 +7,7 @@ interface LogoProps {
     pause?: number;
 }
 
-const Logo: React.FC<LogoProps> = ({ title = "PABO.dev", speed = 150, pause = 1000 }) => {
+const Logo: React.FC<LogoProps> = ({ title = "", speed = 150, pause = 1000 }) => {
     const [displayedText, setDisplayedText] = useState("");
     const [index, setIndex] = useState(0);
 

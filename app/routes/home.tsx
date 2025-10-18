@@ -9,5 +9,12 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-    return <HomeLayout />;
+    return (
+        <div className="relative min-h-screen w-full">
+            <div className="absolute inset-0 animated-bg dark:animated-bg-dark -z-10"></div>
+            <div className="relative z-10 text-white">
+                <HomeLayout />
+            </div>
+        </div>
+    );
 }
