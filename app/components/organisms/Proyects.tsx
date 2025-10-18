@@ -10,19 +10,35 @@ const ProjectsSection: React.FC = () => {
         { id: 3, name: "Cartalogo", desc: "Una tienda de cartas sueltas. Creado Por Sebastian Pino", tecnologies: ["spring"], link:"https://github.com/SebastianPinoB/ProyectoCartas"},
     ];
 
-    const [visibleCount, setVisibleCount] = useState(9); // 3 filas * 3 columnas
+    const [visibleCount, setVisibleCount] = useState(3);
 
-    const handleShowMore = () => setVisibleCount(prev => prev + 9); // agregar 3 filas más
+    const handleShowMore = () => setVisibleCount(prev => prev + 3);
+
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <CustomCard style={{ textAlign: "center", padding: "40px" }}>
+        <CustomCard float={false} style={{
+            textAlign: "center",
+            padding: "60px",
+            width: "100%",
+            maxWidth: "1200px",
+            boxSizing: "border-box",
+            border: isHovered ? "2px solid #1890ff" : "white",
+
+        }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+        >
 
             <div
                 style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", // ancho mínimo más amplio
-                    gap: "20px",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                    gap: "30px",
+                    width: "100%",
                     justifyItems: "center",
+                    alignItems: "stretch",
+                    color: "black",
                 }}
             >
                 {allProjects.slice(0, visibleCount).map(p => (
@@ -32,6 +48,7 @@ const ProjectsSection: React.FC = () => {
                         description={p.desc}
                         tecnologies={p.tecnologies}
                         link={p.link}
+                        style={{ width: "100%", height:"100%", minHeight: "260px" }}
                     />
                 ))}
             </div>

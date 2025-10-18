@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CustomCard from "../atoms/Card";
 import { Input, Button } from "antd";
+import TypingText from "~/components/atoms/TypingText";
 
 const { TextArea } = Input;
 
@@ -48,7 +49,7 @@ const ContactFormCard: React.FC<ContactFormCardProps> = ({ onSubmit }) => {
                 padding: "40px",
             }}
         >
-            <h2 style={{ fontSize: "40px", marginBottom: "30px", textAlign: "center" }}>Contacto</h2>
+            <TypingText style={{ fontSize: "40px", marginBottom: "60px", textAlign: "center" }} text={"Contacto"} />
 
             <Input
                 placeholder="Nombre"

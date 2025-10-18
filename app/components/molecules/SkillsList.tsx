@@ -7,14 +7,14 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-    { name: "Python", icon: <SiPython color="#FFFF" />},
-    { name: "Spring Java", icon: <SiSpring color="#FFFF" />},
-    { name: "JavaScript", icon: <SiJavascript color="#FFFF" /> },
-    { name: "TypeScript", icon: <SiTypescript color="#FFFF" /> },
-    { name: "React", icon: <SiReact color="#FFFF" /> },
-    { name: "Node.js", icon: <SiNodedotjs color="#FFFF" /> },
-    { name: "HTML5", icon: <SiHtml5 color="#FFFF" /> },
-    { name: "CSS3", icon: <SiCss3 color="#FFFF" /> },
+    { name: "Python", icon: <SiPython color="#1885F0" />},
+    { name: "Spring Java", icon: <SiSpring color="#1885F0" />},
+    { name: "JavaScript", icon: <SiJavascript color="#1885F0" /> },
+    { name: "TypeScript", icon: <SiTypescript color="#1885F0" /> },
+    { name: "React", icon: <SiReact color="#1885F0" /> },
+    { name: "Node.js", icon: <SiNodedotjs color="#1885F0" /> },
+    { name: "HTML5", icon: <SiHtml5 color="#1885F0" /> },
+    { name: "CSS3", icon: <SiCss3 color="#1885F0" /> },
 ];
 
 const SkillsList: React.FC = () => {

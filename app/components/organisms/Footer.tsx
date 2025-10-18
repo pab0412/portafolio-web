@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             }}
         >
 
-            {/* Texto del footer */}
+
             <p style={{ margin: 0, fontSize: "16px" }}>
                 © {new Date().getFullYear()} Pab0412 — Todos los derechos reservados
             </p>
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             </p>
 
 
-            {/* Redes sociales */}
+
             <div style={{ marginTop: "20px" }}>
                 <SocialIcon
                     icon={FaGithub}

@@ -56,9 +56,6 @@ const Header: React.FC = () => {
                 />
             </div>
 
-
-
-
             <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 style={{

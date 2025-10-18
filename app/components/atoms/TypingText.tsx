@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 interface TypingTextProps {
     text: string;
     speed?: number;
+    style?: React.CSSProperties;
 }
 
-const TypingText: React.FC<TypingTextProps> = ({ text, speed = 50 }) => {
+const TypingText: React.FC<TypingTextProps> = ({ text, speed = 50, style }) => {
     const [displayedText, setDisplayedText] = useState("");
 
     useEffect(() => {
@@ -21,7 +22,9 @@ const TypingText: React.FC<TypingTextProps> = ({ text, speed = 50 }) => {
         return () => clearInterval(interval);
     }, [text, speed]);
 
-    return <span dangerouslySetInnerHTML={{ __html: displayedText }} />;
+    return <span
+        style={style}
+        dangerouslySetInnerHTML={{ __html: displayedText }} />;
 };
 
 export default TypingText;

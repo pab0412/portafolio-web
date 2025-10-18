@@ -14,25 +14,25 @@ const AboutSection: React.FC = () => {
     return (
         <CustomCard
             style={{
-                maxWidth: "1200px", // 🔥 ancho máximo mucho mayor
-                width: "90%", // ocupa casi toda la pantalla
-                margin: "0 auto", // centrado horizontal
-                padding: "40px 50px", // espacio interior grande
+                maxWidth: "1200px",
+                width: "90%",
+                margin: "0 auto",
+                padding: "40px 50px",
             }}
+
         >
             <div
                 style={{
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "flex-start",
-                    gap: "60px", // más separación entre imagen y texto
+                    gap: "60px",
                     flexWrap: "wrap",
                 }}
             >
-                {/* Imagen más grande a la izquierda */}
+
                 <ProfileIcon imageUrl={profile} size={200} />
 
-                {/* Texto y habilidades */}
                 <div style={{ flex: 1, minWidth: "350px" }}>
                     <h2
                         style={{
@@ -50,7 +50,7 @@ const AboutSection: React.FC = () => {
                             lineHeight: "1.7",
                             color: "#333",
                             marginBottom: "40px",
-                            maxWidth: "750px", // 🔥 texto más ancho
+                            maxWidth: "750px",
                         }}
                     >
                         <TypingText text={aboutText} speed={50} />

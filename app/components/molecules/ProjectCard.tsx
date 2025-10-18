@@ -8,12 +8,14 @@ import {
     SiHtml5,
     SiCss3, SiSpring,
 } from "react-icons/si";
+import ProjectsSection from "~/components/organisms/Proyects";
 
 interface ProjectCardProps {
     title: string;
     description: string;
     link?: string;
     tecnologies: string[];
+    style?: React.CSSProperties;
 }
 
 
@@ -27,26 +29,43 @@ const iconMap: Record<string, React.ReactElement> = {
     css: <SiCss3 size={24} />,
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, tecnologies }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, tecnologies, style }) => {
     return (
         <CustomCard
             style={{
                 maxWidth: "400px",
+                minHeight: "280px", //
                 margin: "20px",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                ...style, //
             }}
         >
-            <h3 style={{ marginBottom: "10px" }}>{title}</h3>
-            <p style={{ marginBottom: "10px" }}>{description}</p>
+            <div>
+                <h3 style={{ marginBottom: "10px", fontWeight:"bold", fontSize:"1.5rem", paddingBottom:"10px", color:"#1885F0"}}>{title}</h3>
+                <p style={{
+                    overflow: "hidden",
+                    display: "-webkit-box",
+                    WebkitLineClamp: 4, //
+                    WebkitBoxOrient: "vertical",
+                    textOverflow: "ellipsis",
+                    wordBreak: "break-word",
+                    marginBottom: "20px",
+                }}>
+                    {description}
+                </p>
+            </div>
 
-            <div style={{ display: "flex", gap: "8px", marginTop:"2px" ,marginBottom: "10px", justifyContent: "center", alignItems: "center" }}>
+            <div style={{ display: "flex", gap: "8px", marginTop:"2px", marginBottom: "50px", justifyContent: "center", alignItems: "center" }}>
                 {tecnologies.map((tech, idx) => {
                     const Icon = iconMap[tech.toLowerCase()];
                     return (
                         <span key={idx} title={tech}>
-              {Icon || tech}
-            </span>
+                            {Icon || tech}
+                        </span>
                     );
                 })}
             </div>
@@ -56,6 +75,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, tec
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{
+                        fontWeight: "bold",
+                        fontSize: "1.5rem",
+                    }}
                 >
                     Ver proyecto
                 </a>

@@ -6,8 +6,9 @@ interface CustomCardProps {
     width?: string | number;
     maxWidth?: string | number;
     style?: React.CSSProperties;
-    onMouseEnter?: React.MouseEventHandler<HTMLDivElement>; // ✅ nuevo
-    onMouseLeave?: React.MouseEventHandler<HTMLDivElement>; // ✅ nuevo
+    float?: boolean;
+    onMouseEnter?: React.MouseEventHandler<HTMLDivElement>;
+    onMouseLeave?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const CustomCard: React.FC<CustomCardProps> = ({
@@ -15,6 +16,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
                                                    width = "80%",
                                                    maxWidth = "800px",
                                                    style = {},
+                                                   float = true,
                                                    onMouseEnter,
                                                    onMouseLeave,
                                                }) => {
@@ -28,11 +30,11 @@ const CustomCard: React.FC<CustomCardProps> = ({
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
                 textAlign: "center",
                 padding: "30px",
-                animation: "float 6s ease-in-out infinite",
+                animation: float ? "float 6s ease-in-out infinite" : "none",
                 ...style,
             }}
-            onMouseEnter={onMouseEnter} // ✅ pasa los eventos
-            onMouseLeave={onMouseLeave} // ✅ pasa los eventos
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
         >
             {children}
         </Card>

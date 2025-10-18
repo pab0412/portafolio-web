@@ -11,6 +11,7 @@ const FloatingTitle: React.FC<FloatingTitleProps> = ({ title, subtitle }) => {
 
     return (
         <CustomCard
+            float={false}
             style={{
                 margin: "50px auto",
                 maxWidth: "400px",
@@ -24,6 +25,8 @@ const FloatingTitle: React.FC<FloatingTitleProps> = ({ title, subtitle }) => {
             <h2 style={{ fontSize: "24px", color: "#1890ff", margin: 0, fontWeight: "bold" }}>
                 {title}
             </h2>
+
+
             {subtitle && (
                 <p style={{ marginTop: "5px", color: "#555", fontSize: "14px" }}>
                     {subtitle}
