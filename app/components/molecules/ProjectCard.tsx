@@ -10,7 +10,6 @@ import {
 } from "react-icons/si";
 
 interface ProjectCardProps {
-    image?: string;
     title: string;
     description: string;
     link?: string;
@@ -28,17 +27,14 @@ const iconMap: Record<string, React.ReactElement> = {
     css: <SiCss3 size={24} />,
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, image, tecnologies }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, tecnologies }) => {
     return (
         <CustomCard
             style={{
                 maxWidth: "400px",
                 margin: "20px",
-                backgroundImage: image ? `url(${image})` : undefined,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                color: image ? "#fff" : "#000",
-                textShadow: image ? "0 1px 4px rgba(0,0,0,0.6)" : undefined,
             }}
         >
             <h3 style={{ marginBottom: "10px" }}>{title}</h3>
@@ -60,7 +56,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: image ? "#ffd700" : "#1890ff" }}
                 >
                     Ver proyecto
                 </a>

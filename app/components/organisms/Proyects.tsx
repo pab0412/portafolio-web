@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import CustomCard from "../atoms/Card";
 import { Button } from "antd";
 import ProjectCard from "../molecules/ProjectCard";
-import TypingText from "~/components/atoms/TypingText";
 
 const ProjectsSection: React.FC = () => {
     const allProjects = [
@@ -32,7 +31,6 @@ const ProjectsSection: React.FC = () => {
                         title={p.name}
                         description={p.desc}
                         tecnologies={p.tecnologies}
-                        image={undefined}
                         link={p.link}
                     />
                 ))}

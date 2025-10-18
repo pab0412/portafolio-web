@@ -16,7 +16,6 @@ const Header: React.FC = () => {
             window.history.replaceState(null, "", path);
         }
 
-        // Scroll suave a la sección
         const el = document.getElementById(id);
         if (el) el.scrollIntoView({ behavior: "smooth" });
     };
@@ -56,6 +55,8 @@ const Header: React.FC = () => {
                     }}
                 />
             </div>
+
+
 
 
             <button
