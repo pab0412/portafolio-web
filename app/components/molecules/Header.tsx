@@ -46,9 +46,12 @@ const Header: React.FC = () => {
                                 handleScroll("about", "/#about");
                                 break;
                             case "2":
-                                handleScroll("projects", "/#projects");
+                                handleScroll("services", "/#services");
                                 break;
                             case "3":
+                                handleScroll("projects", "/#projects");
+                                break;
+                            case "4":
                                 handleScroll("contact", "/#contact");
                                 break;
                         }

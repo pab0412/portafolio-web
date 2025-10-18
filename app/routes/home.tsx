@@ -1,34 +1,13 @@
-import React from "react";
-import Header from "../components/molecules/Header";
-import AboutMe from "../components/organisms/AboutSection";
-import ProjectsSection from "../components/organisms/Proyects";
-import ContactSection from "../components/organisms/ContactSection";
-import Footer from "../components/organisms/Footer";
-import FloatingTitle from "../components/molecules/Title";
+import type { Route } from "./+types/home";
+import HomeLayout from "../components/templates/HomeLayout";
 
-const Home = () => {
-    return (
-        <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", width: "100%" }}>
-            <Header />
+export function meta({}: Route.MetaArgs) {
+    return [
+        { title: "New React Router App" },
+        { name: "description", content: "Welcome to React Router!" },
+    ];
+}
 
-            <div id="about" style={{ width: "100%", paddingTop: "70px" }}>
-                <FloatingTitle title="Sobre mí" />
-                <AboutMe />
-            </div>
-
-            <div id="projects" style={{ width: "100%" }}>
-                <FloatingTitle title="Proyectos" subtitle={"Proyectos creados por mi o donde contribuí"} />
-                <ProjectsSection />
-            </div>
-
-            <div id="contact" style={{ width: "100%" }}>
-                <FloatingTitle title="Contáctame" />
-                <ContactSection />
-            </div>
-
-            <Footer />
-        </div>
-    );
-};
-
-export default Home;
+export default function Home() {
+    return <HomeLayout />;
+}

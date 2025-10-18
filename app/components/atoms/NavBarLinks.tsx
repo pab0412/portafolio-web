@@ -12,8 +12,9 @@ const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {
             selectedKeys={[]}
             items={[
                 { key: "1", label: "Sobre mi" },
-                { key: "2", label: "Proyectos" },
-                { key: "3", label: "Contacto" },
+                { key: "2", label: "Servicios" },
+                { key: "3", label: "Proyectos" },
+                { key: "4", label: "Contacto" },
             ]}
             onClick={(info) => {
                 if (onLinkClick) onLinkClick(info.key);

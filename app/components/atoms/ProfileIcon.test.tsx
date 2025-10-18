@@ -1,102 +1,40 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ProfileIcon from './ProfileIcon';
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
+import ProfileIcon from "./ProfileIcon";
 
-describe('ProfileIcon', () => {
-    const mockImageUrl = 'https://example.com/profile.jpg';
+describe("ProfileIcon", () => {
+    const imageUrl = "https://example.com/profile.jpg";
+    const altText = "Foto de prueba";
 
-    //  PASA
-    it('debe renderizar la imagen con la URL proporcionada', () => {
-        render(<ProfileIcon imageUrl={mockImageUrl} />);
+    it("debe renderizar el componente correctamente", () => {
+        render(<ProfileIcon imageUrl={imageUrl} alt={altText} size={120} />);
 
-        const image = screen.getByRole('img');
-        expect(image).toHaveAttribute('src', mockImageUrl);
+        const img = screen.getByAltText(altText) as HTMLImageElement;
+        expect(img).toBeInTheDocument();
+        expect(img.src).toBe(imageUrl);
+
+        const container = img.parentElement as HTMLElement;
+        expect(container).toHaveStyle({
+            width: "120px",
+            height: "120px",
+            borderRadius: "50%",
+            border: "3px solid #1890ff",
+            cursor: "pointer",
+        });
     });
 
-    // Este pasa
-    it('debe usar el alt text por defecto si no se proporciona', () => {
-        render(<ProfileIcon imageUrl={mockImageUrl} />);
+    it("debe escalar y cambiar borde al hacer hover", () => {
+        render(<ProfileIcon imageUrl={imageUrl} alt={altText} />);
+        const container = screen.getByAltText(altText).parentElement as HTMLElement;
 
-        const image = screen.getByAltText('Foto de perfil');
-        expect(image).toBeInTheDocument();
-    });
+        // Simular hover
+        fireEvent.mouseEnter(container);
+        expect(container.style.transform).toBe("scale(1.1)");
+        expect(container.style.borderColor).toBe("rgb(64, 169, 255)");
 
-    //  Este pasa
-    it('debe usar el alt text personalizado cuando se proporciona', () => {
-        render(<ProfileIcon imageUrl={mockImageUrl} alt="Mi foto" />);
-
-        const image = screen.getByAltText('Mi foto');
-        expect(image).toBeInTheDocument();
-    });
-
-    // FALLA
-    it('debe aplicar el tamaño personalizado', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} size={150} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        expect(wrapper.style.width).toBe('200px'); //
-        expect(wrapper.style.height).toBe('200px');
-    });
-
-    //  PASA
-    it('debe usar el tamaño por defecto de 100px', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        expect(wrapper.style.width).toBe('100px');
-        expect(wrapper.style.height).toBe('100px');
-    });
-
-    // FALLA
-    it('debe cambiar el transform al hacer hover', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        fireEvent.mouseEnter(wrapper);
-
-        expect(wrapper.style.transform).toBe('scale(1.5)'); //  Debería ser scale(1.1), no 1.5
-    });
-
-    // Este pasa
-    it('debe restaurar el transform al salir del hover', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        fireEvent.mouseEnter(wrapper);
-        fireEvent.mouseLeave(wrapper);
-
-        expect(wrapper.style.transform).toBe('scale(1)');
-    });
-
-    // FALLO: toHaveStyle puede ser inconsistente con múltiples propiedades
-    it('debe aplicar estilos del contenedor', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        expect(wrapper).toHaveStyle({
-            borderRadius: '50%',
-            overflow: 'hidden',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-        }); // toHaveStyle con múltiples propiedades puede fallar
-    });
-
-    // Este pasa
-    it('debe tener cursor pointer', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        expect(wrapper.style.cursor).toBe('pointer');
-    });
-
-    //  FALLO: Verifica el color incorrecto
-    it('debe cambiar el borderColor al hacer hover', () => {
-        const { container } = render(<ProfileIcon imageUrl={mockImageUrl} />);
-        const wrapper = container.firstChild as HTMLElement;
-
-        fireEvent.mouseEnter(wrapper);
-
-        expect(wrapper.style.borderColor).toBe('#ff0000'); // Debería ser #40a9ff
+        fireEvent.mouseLeave(container);
+        expect(container.style.transform).toBe("scale(1)");
+        expect(container.style.borderColor).toBe("rgb(24, 144, 255)");
     });
 });

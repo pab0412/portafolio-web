@@ -8,7 +8,7 @@ import {
     SiHtml5,
     SiCss3, SiSpring,
 } from "react-icons/si";
-import ProjectsSection from "~/components/organisms/Proyects";
+import ProjectsSection from "~/components/organisms/ProjectSection";
 
 interface ProjectCardProps {
     title: string;
