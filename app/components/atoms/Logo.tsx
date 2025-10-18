@@ -3,8 +3,8 @@ import { Flex } from "antd";
 
 interface LogoProps {
     title?: string;
-    speed?: number; // velocidad en ms por letra
-    pause?: number; // pausa al final antes de reiniciar
+    speed?: number;
+    pause?: number;
 }
 
 const Logo: React.FC<LogoProps> = ({ title = "PABO.dev", speed = 150, pause = 1000 }) => {
@@ -19,7 +19,7 @@ const Logo: React.FC<LogoProps> = ({ title = "PABO.dev", speed = 150, pause = 10
 
         if (index > title.length) {
             clearInterval(timer);
-            // esperar un momento y reiniciar
+
             const timeout = setTimeout(() => {
                 setDisplayedText("");
                 setIndex(0);

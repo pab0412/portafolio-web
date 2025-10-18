@@ -1,7 +1,7 @@
 import React from "react";
 
 interface SocialIconProps {
-    icon: React.ElementType; // componente del icono, no JSX.Element
+    icon: React.ElementType;
     link: string;
     size?: number;
     color?: string;

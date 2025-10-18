@@ -9,7 +9,7 @@ const NavBarLinks: React.FC<NavBarLinksProps> = ({ onLinkClick }) => {
     return (
         <Menu
             mode="horizontal"
-            selectedKeys={[]} // 👈 esto evita que quede seleccionado
+            selectedKeys={[]}
             items={[
                 { key: "1", label: "Sobre mi" },
                 { key: "2", label: "Proyectos" },
