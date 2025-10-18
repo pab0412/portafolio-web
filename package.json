@@ -6,12 +6,16 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
   },
   "dependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
     "@react-router/node": "^7.9.2",
     "@react-router/serve": "^7.9.2",
+    "@vitejs/plugin-react": "^5.0.4",
     "antd": "^5.27.4",
     "bootstrap": "^5.3.8",
     "isbot": "^5.1.31",
@@ -23,12 +27,20 @@
   "devDependencies": {
     "@react-router/dev": "^7.9.2",
     "@tailwindcss/vite": "^4.1.13",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "jest": "^30.2.0",
+    "jsdom": "^27.0.0",
     "tailwindcss": "^4.1.13",
+    "ts-jest": "^29.4.5",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.2.4"
   }
 }
