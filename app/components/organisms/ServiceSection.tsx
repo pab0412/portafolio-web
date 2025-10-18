@@ -50,9 +50,6 @@ const ServicesSection: React.FC = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#1890ff", marginBottom: "40px" }}>
-                Servicios
-            </h2>
 
             <div
                 style={{

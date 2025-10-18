@@ -5,7 +5,7 @@ import ProjectCard from "../molecules/ProjectCard";
 
 const ProjectsSection: React.FC = () => {
     const allProjects = [
-        { id: 1, name: "Portafolio Web", desc: "¿Interesado en ver mi experiencia?. Creado por mi (pab0412)", tecnologies: ["react", "typescript", 'css'], link:"https://github.com/pab0412/portafolio-web"},
+        { id: 1, name: "Portafolio Web", desc: "Portafolio web personal. Creado por mi (pab0412)", tecnologies: ["react", "typescript", 'css'], link:"https://github.com/pab0412/portafolio-web"},
         { id: 2, name: "LevelUp Gamer", desc: "Tienda Digital de perifericos gamer. Creado por Sebastian Pino", tecnologies: ["html", "css", "javascript"], link: "https://github.com/SebastianPinoB/Level-up-gamer"},
         { id: 3, name: "Cartalogo", desc: "Una tienda de cartas sueltas. Creado Por Sebastian Pino", tecnologies: ["spring"], link:"https://github.com/SebastianPinoB/ProyectoCartas"},
     ];

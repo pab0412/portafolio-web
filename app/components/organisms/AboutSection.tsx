@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
     const aboutText =
         '¡Hola! Soy <strong>Pablo Sepúlveda</strong>, estudiante de DuocUC principiante en desarrollo web y programador principiante.';
 
-    const text_programs = '<bold>Lenguajes de programación</bold>';
+    const text_programs = '<strong>Lenguajes, Frameworks y Tecnologías</strong>';
 
     return (
         <CustomCard

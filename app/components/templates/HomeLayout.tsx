@@ -19,17 +19,17 @@ const HomeLayout: React.FC = () => {
             </div>
 
             <div id="services" style={{width:'100%'}}>
-                <FloatingTitle title="Servicios" />
+                <FloatingTitle title="Servicios" subtitle="Puedo ofrecerte" />
                 <ServicesSection />
             </div>
 
             <div id="projects" style={{ width: "100%" }}>
-                <FloatingTitle title="Proyectos" subtitle={"Proyectos creados por mi o donde contribuí"} />
+                <FloatingTitle title="Proyectos" subtitle={"Proyectos que he creado o contribuido"} />
                 <ProjectsSection />
             </div>
 
             <div id="contact" style={{ width: "100%" }}>
-                <FloatingTitle title="Contáctame" />
+                <FloatingTitle title="Contáctame" subtitle="¿Estas interesado?, enviame un mensaje y respondere pronto" />
                 <ContactSection />
             </div>
 

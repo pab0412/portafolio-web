@@ -49,7 +49,6 @@ const ContactFormCard: React.FC<ContactFormCardProps> = ({ onSubmit }) => {
                 padding: "40px",
             }}
         >
-            <TypingText style={{ fontSize: "40px", marginBottom: "60px", textAlign: "center" }} text={"Contacto"} />
 
             <Input
                 placeholder="Nombre"
