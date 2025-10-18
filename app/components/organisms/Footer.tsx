@@ -1,6 +1,6 @@
 import React from "react";
 import SocialIcon from "../atoms/SocialsIcon";
-import {FaGithub, FaLinkedin, FaTwitter, FaWhatsapp} from "react-icons/fa";
+import {FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa";
 
 const Footer: React.FC = () => {
     return (
