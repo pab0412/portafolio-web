@@ -48,6 +48,22 @@ body {
 /*
     Tema oscuro con texto blanco
  */
-.ant-card.custom-dark * {
-    color: white !important;
+
+.ant-card.custom-dark {
+    background-color: #1f2937 !important; /* gris oscuro */
+    color: #ffffff; /* color base del texto */
+}
+
+/* Solo afecta texto genérico, no títulos ni íconos */
+.ant-card.custom-dark p,
+.ant-card.custom-dark span,
+.ant-card.custom-dark a {
+    color: #ffffff !important;
+}
+
+/* Mantener el color de los títulos personalizados */
+.ant-card.custom-dark h1,
+.ant-card.custom-dark h2,
+.ant-card.custom-dark h3 {
+    color: inherit !important;
 }
